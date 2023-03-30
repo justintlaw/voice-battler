@@ -1,3 +1,5 @@
+from enum import Enum
+
 class Command:
   def __init__(self, target, action, amount, item) -> None:  
     self.target = target
