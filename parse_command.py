@@ -22,7 +22,7 @@ gameActions = {
   "Stop"
 }
 
-itemWorriors = {
+itemWarriors = {
   "worrior",
   "warrior",
   "worriors",
@@ -120,7 +120,7 @@ def get_amount(text):
 def get_item(text):
   text = text.lower()
 
-  for word in itemWorriors:
+  for word in itemWarriors:
     if word.lower() in text:
       return Soldier.WARRIOR
   

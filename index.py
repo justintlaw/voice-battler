@@ -20,17 +20,7 @@ async def get_command():
     if command:
       print("command", command)
 
-      # START TEMP CODE
-      command = {
-        "action": "buy",
-        "target": "warriors",
-        "amount": 1
-      }
-
       return json.dumps(command)
-      # END TEMP CODE
-
-      return command
   except:
     pass
 
@@ -83,7 +73,8 @@ def listen():
         print("text", text)
         command = parse_command(text)
         print("command", command)
-        q_commands.put(command.toJson())
+        if command:
+          q_commands.put(command.toJson())
 
 
 async def start_server():
