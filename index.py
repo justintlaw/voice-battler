@@ -49,8 +49,8 @@ async def handler(websocket, path):
       if command:
         await websocket.send(command)
         print("SENT", command)
-    except websockets.ConnectionClosedError:
-      print("Connection closed.")
+    except websockets.ConnectionClosedError as e:
+      print("Connection closed.", e)
       break
 
 
